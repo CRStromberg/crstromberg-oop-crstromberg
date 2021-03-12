@@ -20,6 +20,7 @@ class CityTest(unittest.TestCase):
 
         city : City = City(size, name, population)
         self.assertEqual(city.density(), "Town")
+        self.assertEqual
 
 if __name__ == '__main__':
     unittest.main()

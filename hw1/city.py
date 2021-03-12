@@ -8,16 +8,6 @@ class City:
     def isNewCity(self) -> bool:
         return self.population == 0
 
-    @size.setter
-    def name(self, area: float) -> None:
-        if area < 0:
-            raise ValueError('Error, Not Enough Land!')
-        self._size = area
-
-    @property 
-    def size(self):
-        return self._size
-
     def density(self) -> str:
         if self._population < 100000:
             return "Town"
@@ -27,5 +17,19 @@ class City:
             return "MegaCity"
 
     @property
+    def population(self):
+        return self._population
+
+    @property 
+    def size(self):
+        return self._size
+
+    @property
     def name(self) -> str:
         return self._name
+
+    @size.setter
+    def landSize(self, area: float) -> None:
+        if area < 0:
+            raise ValueError('Error, Not Enough Land!')
+        self._size = area
