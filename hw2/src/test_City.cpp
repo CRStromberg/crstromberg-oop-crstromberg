@@ -3,7 +3,7 @@
 
 using namespace city;
 
-TEST(City, Constructor) {
+TEST(City, One) {
     float size = 0.86;
     std::string name = "Ouray";
     int population = 1000;
@@ -12,7 +12,10 @@ TEST(City, Constructor) {
     ASSERT_EQ(city.getPopulation(),population);
     ASSERT_EQ(city.getName(), name);
     ASSERT_EQ(city.getSize(), size);
+    ASSERT_EQ(city.density(), "Town");
 }
+
+
 int main(int argc, char** argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
