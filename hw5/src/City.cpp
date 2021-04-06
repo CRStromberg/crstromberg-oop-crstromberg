@@ -3,12 +3,9 @@
 
 namespace city {
 
-    City::City(float sqMiles, const std::string& education, float size, const std::string& name, int population)
-    : Neighborhood(sqMiles, education) {
-        c_size = size;
-        c_name = name;
-        c_population = population;
-    }
+    City::City() : City(1.2, DEFAULT_EDUCATION, 12.3, "ChrisVille", 0) {}
+    City::City(float sqMiles, const std::string& education, float size, const std::string& name, int population) : Neighborhood(sqMiles, education), c_size(size), c_name(name), c_population(population) {}
+    City::~City() {}
 
     bool City::isNewCity() const { return c_population == 0; }
 
