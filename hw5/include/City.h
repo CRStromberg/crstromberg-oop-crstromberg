@@ -14,13 +14,12 @@ namespace city {
         public:
         City();
         City(float sqMiles, std::string education, float size, std::string name, int population = 0);
-
         virtual ~City();
         bool isNewCity() const;
-        std::string density();
+        const std::string& density() const;
         int getPopulation() const;
         float getSize() const;
-        std::string getName() const;
+        const std::string& getName() const;
         void setSize(float area);
 
     };
