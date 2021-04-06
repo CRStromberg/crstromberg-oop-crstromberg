@@ -17,7 +17,7 @@ class Houses:
     pass
 
 class City(Neighborhood):
-    def __init__(self,size : float, name : str, population : int = 0) -> None:
+    def __init__(self, sqMiles : float, education : str, size : float, name : str, population : int = 0) -> None:
         Neighborhood.__init__(self, sqMiles, education)
         self._size : float = size
         self._name : str = name
