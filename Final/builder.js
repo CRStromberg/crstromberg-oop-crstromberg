@@ -14,3 +14,8 @@ class Engine {
         }
     }
 }
+class Vehicle {
+    constructor(name) {
+        this.name = name;
+    }
+}
